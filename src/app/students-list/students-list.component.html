@@ -1,0 +1,41 @@
+<body>
+	<div class="background-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmfMQJKQQxlYZzTrrT22gWXxyuo7h6CzndDA&usqp=CAU'); border: rgb(245, 242, 242);">
+        <div class ="container">
+            <div style="text-decoration: black; font-family: 'Times New Roman', Times, serif;" class="text-center">
+	<h2>Students List</h2>
+    </div>
+</div>
+</div>
+</body>
+   
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Register No</th>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Applicant Name</th>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Course</th>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Institute</th>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">E-Mail</th>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Contact-No</th>
+            <th>Actions</th>
+           </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let student of students">
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.regNo}}</td>
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.applicantName}}</td>
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.course}}</td>
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.institute}}</td>
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.emailId}}</td>
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.userMobile}}</td>
+            <td>
+                <button type="button" (click)="updateStudent(student.regNo)" class="btn btn-info">Update</button>
+                <button (click)="deleteStudent(student.regNo)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button  type="button"(click)="studentDetails(student.regNo)" class="btn btn-secondary" style="margin-left: 10px">View</button>
+            </td>
+       
+        </tr>
+    </tbody>
+</table>
+
+    

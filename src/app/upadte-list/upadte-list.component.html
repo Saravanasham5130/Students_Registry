@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+</head>
+<body 
+	 class="background-image" 
+	style="background-image: url('https://previews.123rf.com/images/andreykuzmin/andreykuzmin1911/andreykuzmin191100039/136223736-old-map-background-with-blank-scroll-paper-banner.jpg');">
+    <div style="color: rgb(19, 1, 1); background-image: url();" class="col-md-6 offset-md-3">
+        <h3> Update Student </h3>
+        <form (ngSubmit) = "onSubmit()">
+        
+            <div class="form-group">
+                <label> Applicant Name :</label>
+                <input type="text" class ="form-control" id = "applicantName"
+                    [(ngModel)] = "student.applicantName" name = "name of the student">
+            </div>
+        
+            <div class="form-group">
+                <label> Course :</label>
+                <input type="text" class ="form-control" id = "course"
+                    [(ngModel)] = "student.course" name = "Course">
+            </div>
+            <div class="form-group">
+                <label> Institute :</label>
+                <input type="text" class ="form-control" id = "institute"
+                    [(ngModel)] = "student.institute" name = "institute">
+            </div>
+            <div class="form-group">
+                <label> E-mail :</label>
+                <input type="text" class ="form-control" id = "emailId"
+                    [(ngModel)] = "student.emailId" name = "emailId">
+            </div>
+        
+            <div class="form-group">
+                <label> Contact-No :</label>
+                <input type="text" class ="form-control" id = "userMobile"
+                    [(ngModel)] = "student.userMobile" name = "Contact-No">
+            </div>
+            <button class = "btn btn-success" type ="submit">Submit</button>
+
+        </form>
+        </div> 
+     
+      
+
+ 
